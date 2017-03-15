@@ -1,0 +1,30 @@
+{
+  "name": "my-memo-cli",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "memo": "bin/memo.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "FujiHaruka/my-memo-cli",
+  "author": {
+    "name": "Fuji Haruka",
+    "email": "fizzyjohn316@gmail.com",
+    "url": "https://github.com/FujiHaruka"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FujiHaruka/my-memo-cli/issues"
+  },
+  "homepage": "https://github.com/FujiHaruka/my-memo-cli#readme",
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "dependencies": {
+    "shelljs": "^0.7.7",
+    "uuid": "^3.0.1"
+  }
+}
