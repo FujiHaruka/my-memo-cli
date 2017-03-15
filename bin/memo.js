@@ -8,7 +8,7 @@ commander
 
 let actions = [
   ['repos', memo.setRepository],
-  ['list [filter]', memo.list],
+  ['ls [filter]', memo.list],
   ['add', memo.add],
   ['rm [id]', memo.remove],
   ['show [id]', memo.show],
