@@ -13,7 +13,8 @@ let actions = [
   ['rm [id]', memo.remove],
   ['show [id]', memo.show],
   ['edit [id]', memo.edit],
-  ['drop', memo.drop]
+  ['drop', memo.drop],
+  ['push', memo.push]
 ]
 
 for (let action of actions) {
