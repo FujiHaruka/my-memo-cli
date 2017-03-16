@@ -10,5 +10,29 @@
     "title": "test2",
     "text": "test2\nahhhh",
     "updatedAt": "2017-03-15T17:01:34.846Z"
+  },
+  {
+    "id": "78589c5d",
+    "title": "keras on docker",
+    "text": "keras on docker\n\nカレントディレクトリをkeras環境にするには。\n\nsudo docker run -it -v $(pwd):/srv gw000/keras:1.2.2-py3 bash\n\npip3 install pillow\npip3 install progressbar2\n\n",
+    "updatedAt": "2017-03-16T01:55:12.351Z"
+  },
+  {
+    "id": "7c569e48",
+    "title": "公開鍵認証の設定",
+    "text": "公開鍵認証の設定\nこれはサーバー側で鍵を生成する例\n\nssh-keygen -f mykey_rsa\n\nサーバー側\ncat mykey_rsa.pub >> ~/.ssh/authorized_keys\nchmod 600 ~/.ssh/authorized_keys\n\nクライアント側\nmykey_rsa を設置",
+    "updatedAt": "2017-03-16T01:58:01.083Z"
+  },
+  {
+    "id": "2abf3433",
+    "title": "tar TIPS",
+    "text": "tar TIPS\nディレクトリを圧縮\ntar cfz archive.tar.gz dir\n\n解凍\ntar xfz archive.tar.gz",
+    "updatedAt": "2017-03-16T02:01:19.155Z"
+  },
+  {
+    "id": "349f9913",
+    "title": "git add を取り消す",
+    "text": "git add を取り消す\ngit reset .",
+    "updatedAt": "2017-03-16T07:20:03.496Z"
   }
 ]
