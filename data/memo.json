@@ -34,5 +34,23 @@
     "title": "git add を取り消す",
     "text": "git add を取り消す\ngit reset .",
     "updatedAt": "2017-03-16T07:20:03.496Z"
+  },
+  {
+    "id": "e656ba46",
+    "title": "clay performance",
+    "text": "clay performance\n\nUse sqlite3\n\ncreate 0: 1092.122ms\ncreate 1: 935.805ms\ncreate 2: 899.286ms\ncreate 3: 932.853ms\ncreate 4: 925.050ms\ncreate 5: 1368.860ms\ncreate 6: 909.706ms\ncreate 7: 974.239ms\ncreate 8: 926.231ms\n",
+    "updatedAt": "2017-03-17T03:37:02.203Z"
+  },
+  {
+    "id": "5287722e",
+    "title": "LINE Notify by curl",
+    "text": "LINE Notify by curl\ncurl -X POST -H 'Authorization: Bearer ${LINE_AUTH}' -F 'message=foobar' https://notify-api.line.me/api/notify",
+    "updatedAt": "2017-03-19T05:05:15.090Z"
+  },
+  {
+    "id": "dfd32c4e",
+    "title": "物体検出 SSD",
+    "text": "物体検出 SSD\nSingle Shot MultiBox Detector\n画像内の物体を位置と一緒に検出する。\nいまのところcaffe実装はあるが、chainerやkerasにはまだない。",
+    "updatedAt": "2017-03-19T05:23:58.189Z"
   }
 ]
