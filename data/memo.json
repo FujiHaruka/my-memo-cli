@@ -52,5 +52,11 @@
     "title": "物体検出 SSD",
     "text": "物体検出 SSD\nSingle Shot MultiBox Detector\n画像内の物体を位置と一緒に検出する。\nいまのところcaffe実装はあるが、chainerやkerasにはまだない。",
     "updatedAt": "2017-03-19T05:23:58.189Z"
+  },
+  {
+    "id": "3dbc8be8",
+    "title": "xargsコマンドで引数を任意の位置に",
+    "text": "xargsコマンドで引数を任意の位置に\nseq 10 | xargs -IXXX echo XXX\n",
+    "updatedAt": "2017-03-21T01:24:26.544Z"
   }
 ]
