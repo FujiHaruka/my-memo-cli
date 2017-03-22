@@ -58,5 +58,11 @@
     "title": "xargsコマンドで引数を任意の位置に",
     "text": "xargsコマンドで引数を任意の位置に\nseq 10 | xargs -IXXX echo XXX\n",
     "updatedAt": "2017-03-21T01:24:26.544Z"
+  },
+  {
+    "id": "a3034c2c",
+    "title": "画像を表示するには eog a.png",
+    "text": "画像を表示するには eog a.png\nフォルダなら、\neog folder\n",
+    "updatedAt": "2017-03-22T04:25:19.378Z"
   }
 ]
