@@ -64,5 +64,11 @@
     "title": "画像を表示するには eog a.png",
     "text": "画像を表示するには eog a.png\nフォルダなら、\neog folder\n",
     "updatedAt": "2017-03-22T04:25:19.378Z"
+  },
+  {
+    "id": "bcfe8218",
+    "title": "ubuntuでapt-get updateに失敗していた",
+    "text": "ubuntuでapt-get updateに失敗していた\n症状\n\nW: http://archive.ubuntu.com/ubuntu/dists/wily/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nW: http://security.ubuntu.com/ubuntu/dists/wily-security/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nW: http://archive.ubuntu.com/ubuntu/dists/wily-updates/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nW: http://ppa.launchpad.net/zfs-native/stable/ubuntu/dists/wily/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nE: いくつかのインデックスファイルのダウンロードに失敗しました。これらは無視されるか、古いものが代わりに使われます。\n\n対処\n\n$ sudo dpkg --remove-architecture 1386\n\nやったぜ！",
+    "updatedAt": "2017-03-25T08:31:35.849Z"
   }
 ]
