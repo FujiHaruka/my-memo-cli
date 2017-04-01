@@ -70,5 +70,29 @@
     "title": "ubuntuでapt-get updateに失敗していた",
     "text": "ubuntuでapt-get updateに失敗していた\n症状\n\nW: http://archive.ubuntu.com/ubuntu/dists/wily/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nW: http://security.ubuntu.com/ubuntu/dists/wily-security/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nW: http://archive.ubuntu.com/ubuntu/dists/wily-updates/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nW: http://ppa.launchpad.net/zfs-native/stable/ubuntu/dists/wily/InRelease の取得に失敗しました  期待されるエントリ 'main/binary-1386/Packages' が Release ファイル内に見つかりません (誤った sources.list エントリか、壊れたファイル)\n\nE: いくつかのインデックスファイルのダウンロードに失敗しました。これらは無視されるか、古いものが代わりに使われます。\n\n対処\n\n$ sudo dpkg --remove-architecture 1386\n\nやったぜ！",
     "updatedAt": "2017-03-25T08:31:35.849Z"
+  },
+  {
+    "id": "e2d85787",
+    "title": "Node.js child_process.spawn(command[, args][, options])",
+    "text": "Node.js child_process.spawn(command[, args][, options])\ncommand <string> The command to run\nargs <Array> List of string arguments\noptions <Object>\ncwd <string> Current working directory of the child process\nenv <Object> Environment key-value pairs\nargv0 <string> Explicitly set the value of argv[0] sent to the child process. This will be set to command if not specified.\nstdio <Array> | <string> Child's stdio configuration. (See options.stdio)\ndetached <boolean> Prepare child to run independently of its parent process. Specific behavior depends on the platform, see options.detached)\nuid <number> Sets the user identity of the process. (See setuid(2).)\ngid <number> Sets the group identity of the process. (See setgid(2).)\nshell <boolean> | <string> If true, runs command inside of a shell. Uses '/bin/sh' on UNIX, and 'cmd.exe' on Windows. A different shell can be specified as a string. The shell should understand the -c switch on UNIX, or /d /s /c on Windows. Defaults to false (no shell).\nReturns: <ChildProcess>\nThe child_process.spawn() method spawns a new process using the given command, with command line arguments in args. If omitted, args defaults to an empty array.\n\nNote: If the shell option is enabled, do not pass unsanitised user input to this function. Any input containing shell metacharacters may be used to trigger arbitrary command execution.\n\nA third argument may be used to specify additional options, with these defaults:\n\n{\n  cwd: undefined,\n  env: process.env\n}\nUse cwd to specify the working directory from which the process is spawned. If not given, the default is to inherit the current working directory.\n\nUse env to specify environment variables that will be visible to the new process, the default is process.env.\n\nExample of running ls -lh /usr, capturing stdout, stderr, and the exit code:\n\n```\nconst spawn = require('child_process').spawn;\nconst ls = spawn('ls', ['-lh', '/usr']);\n\nls.stdout.on('data', (data) => {\n  console.log(`stdout: ${data}`);\n});\n\nls.stderr.on('data', (data) => {\n  console.log(`stderr: ${data}`);\n});\n\nls.on('close', (code) => {\n  console.log(`child process exited with code ${code}`);\n});\n```\nExample: A very elaborate way to run ps ax | grep ssh\n```\nconst spawn = require('child_process').spawn;\nconst ps = spawn('ps', ['ax']);\nconst grep = spawn('grep', ['ssh']);\n\nps.stdout.on('data', (data) => {\n  grep.stdin.write(data);\n});\n\nps.stderr.on('data', (data) => {\n  console.log(`ps stderr: ${data}`);\n});\n\nps.on('close', (code) => {\n  if (code !== 0) {\n    console.log(`ps process exited with code ${code}`);\n  }\n  grep.stdin.end();\n});\n\ngrep.stdout.on('data', (data) => {\n  console.log(data.toString());\n});\n\ngrep.stderr.on('data', (data) => {\n  console.log(`grep stderr: ${data}`);\n});\n\ngrep.on('close', (code) => {\n  if (code !== 0) {\n    console.log(`grep process exited with code ${code}`);\n  }\n});\n```\nExample of checking for failed exec:\n```\nconst spawn = require('child_process').spawn;\nconst child = spawn('bad_command');\n\nchild.on('error', (err) => {\n  console.log('Failed to start child process.');\n});\n```\nNote: Certain platforms (OS X, Linux) will use the value of argv[0] for the process title while others (Windows, SunOS) will use command.\n\nNote: Node.js currently overwrites argv[0] with process.execPath on startup, so process.argv[0] in a Node.js child process will not match the argv0 parameter passed to spawn from the parent, retrieve it with the process.argv0 property instead.\n\n",
+    "updatedAt": "2017-03-27T01:54:34.685Z"
+  },
+  {
+    "id": "0bef2316",
+    "title": "Deploy docker image",
+    "text": "Deploy docker image\ndocker tag <IMAGE_ID> realglobe-docker-virtual.jfrog.io/<DOCKER_REPOSITORY>:<DOCKER_TAG>\ndocker push realglobe-docker-virtual.jfrog.io/<DOCKER_REPOSITORY>:<DOCKER_TAG>",
+    "updatedAt": "2017-03-27T09:32:03.734Z"
+  },
+  {
+    "id": "f169a87c",
+    "title": "Travisからデプロイ",
+    "text": "Travisからデプロイ\nhttps://oncletom.io/2016/travis-ssh-deploy/",
+    "updatedAt": "2017-03-29T07:22:30.788Z"
+  },
+  {
+    "id": "2413f391",
+    "title": "rcpが失敗する時",
+    "text": "rcpが失敗する時\nssh先で source .bashrc などをしているっぽい？\nnvm use 7 で結果を標準出力しているのをやめたら成功した。",
+    "updatedAt": "2017-03-31T03:09:56.303Z"
   }
 ]
