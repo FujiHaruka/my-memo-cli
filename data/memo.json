@@ -94,5 +94,11 @@
     "title": "rcpが失敗する時",
     "text": "rcpが失敗する時\nssh先で source .bashrc などをしているっぽい？\nnvm use 7 で結果を標準出力しているのをやめたら成功した。",
     "updatedAt": "2017-03-31T03:09:56.303Z"
+  },
+  {
+    "id": "bddc9206",
+    "title": "mongoコマンドで中を見る早見表",
+    "text": "mongoコマンドで中を見る早見表\nデータベース一覧\nshow dbs;\n\nデータベースを使う\nuse hogehoge\n\nコレクション一覧\nshow collections\n\nコレクションの中身\ndb.users.find()\n\nドキュメントの抽出\n\ndb.users.find({\"team\":0});\nteam が 0 のもののみ抽出\n\ndb.users,find({\"team\":0},{\"name\":true})\nteam が 0 のドキュメントの名前だけを抽出。\n\ndb.users.find().sort({\"score\":1});\nソート。scoreの昇順。-1で降順。\n\ndb.users.findOne();\nドキュメントを一件だけ抽出。\n\ndb.users.find().limit(3);\nドキュメントを3件だけ抽出。\n\ndb.users.find().skip(2).limit(3);\n2番目のドキュメントから3つ抽出。\n\ndb.users.find().count();\n取得件数をカウント。\n\ndb.users.find( {\"name\": {$in:[\"user-0\", \"user-1\"]}} );\n名前からuser-0とuser-1のみ抽出。\n\ndb.users.find( {\"name\": {$nin:[\"user-0\", \"user-1\"]}} );\n名前からuser-0とuser-1以外のものを抽出。\n\ndb.users.find({\"email\":{$exists:true}});\nemailが存在するドキュメントのみ抽出。\n\n",
+    "updatedAt": "2017-04-04T01:27:36.110Z"
   }
 ]
