@@ -1,17 +1,5 @@
 [
   {
-    "id": "4fbca442",
-    "title": "test",
-    "text": "test\nhogehoge",
-    "updatedAt": "2017-03-15T17:01:25.630Z"
-  },
-  {
-    "id": "2167dd98",
-    "title": "test2",
-    "text": "test2\nahhhh",
-    "updatedAt": "2017-03-15T17:01:34.846Z"
-  },
-  {
     "id": "78589c5d",
     "title": "keras on docker",
     "text": "keras on docker\n\nカレントディレクトリをkeras環境にするには。\n\nsudo docker run -it -v $(pwd):/srv gw000/keras:1.2.2-py3 bash\n\npip3 install pillow\npip3 install progressbar2\n\n",
@@ -130,5 +118,35 @@
     "title": "shellでfor文ワンライナー",
     "text": "shellでfor文ワンライナー\nfor i in `seq 1 10`; do echo $i; done",
     "updatedAt": "2017-04-15T07:24:46.901Z"
+  },
+  {
+    "id": "8f20d732",
+    "title": "旧字変換メモ",
+    "text": "旧字変換メモ\n教　教え\n, 、\n或者　ある者\n然り　しかり\n云う　いう\n少い　少ない\n救　救い\n取扱う　取り扱う\n\n段落は一行開ける\n\n引用の文語ルール\n\nカタカナの名前に注意\n\n漢字のふりがなは括弧\n\nふりがなの読み取りに要注意\n\n文頭に雑音が多い\n\n！のあとに半角スペース",
+    "updatedAt": "2017-04-17T12:19:01.396Z"
+  },
+  {
+    "id": "3e928604",
+    "title": "seqに0-paddingをつける",
+    "text": "seqに0-paddingをつける\nseq -w 10",
+    "updatedAt": "2017-04-18T13:08:56.726Z"
+  },
+  {
+    "id": "89e5c926",
+    "title": "クリップボードにコピーするコマンド",
+    "text": "クリップボードにコピーするコマンド\nubuntu\n\ncat foo.txt | xsel --clipboard --input",
+    "updatedAt": "2017-04-27T01:59:10.745Z"
+  },
+  {
+    "id": "f2de4314",
+    "title": "gstreamer install",
+    "text": "gstreamer install\nubuntu 16.04\n$ apt-get install gstreamer1.0-libav",
+    "updatedAt": "2017-05-02T02:00:07.700Z"
+  },
+  {
+    "id": "65238393",
+    "title": "Docker host ip address from container",
+    "text": "Docker host ip address from container\nip route | awk 'NR==1 {print $3}'",
+    "updatedAt": "2017-05-15T06:26:27.656Z"
   }
 ]
