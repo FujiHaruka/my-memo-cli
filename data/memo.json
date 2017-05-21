@@ -148,5 +148,17 @@
     "title": "Docker host ip address from container",
     "text": "Docker host ip address from container\nip route | awk 'NR==1 {print $3}'",
     "updatedAt": "2017-05-15T06:26:27.656Z"
+  },
+  {
+    "id": "5f23badd",
+    "title": "Should make pull request to Atom markdown viewer",
+    "text": "Should make pull request to Atom markdown viewer\n** strong **",
+    "updatedAt": "2017-05-19T09:15:21.236Z"
+  },
+  {
+    "id": "f81fd90a",
+    "title": "atom 現在の行を",
+    "text": "atom 現在の行を\n現在の行を画面の1行目になるように表示したい",
+    "updatedAt": "2017-05-21T02:33:28.236Z"
   }
 ]
