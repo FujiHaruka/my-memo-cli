@@ -166,5 +166,11 @@
     "title": "[docker] Delete <none> images",
     "text": "[docker] Delete <none> images\ndocker images | awk '/<none/{print $3}' | xargs docker rmi",
     "updatedAt": "2017-05-31T00:53:07.925Z"
+  },
+  {
+    "id": "8128fbd9",
+    "title": "ネットワークのstateを調べる",
+    "text": "ネットワークのstateを調べる\nnetstat -a",
+    "updatedAt": "2017-05-31T09:13:38.021Z"
   }
 ]
