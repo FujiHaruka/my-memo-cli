@@ -160,5 +160,11 @@
     "title": "atom 現在の行を",
     "text": "atom 現在の行を\n現在の行を画面の1行目になるように表示したい",
     "updatedAt": "2017-05-21T02:33:28.236Z"
+  },
+  {
+    "id": "02ec37d0",
+    "title": "[docker] Delete <none> images",
+    "text": "[docker] Delete <none> images\ndocker images | awk '/<none/{print $3}' | xargs docker rmi",
+    "updatedAt": "2017-05-31T00:53:07.925Z"
   }
 ]
