@@ -150,12 +150,6 @@
     "updatedAt": "2017-05-15T06:26:27.656Z"
   },
   {
-    "id": "5f23badd",
-    "title": "Should make pull request to Atom markdown viewer",
-    "text": "Should make pull request to Atom markdown viewer\n** strong **",
-    "updatedAt": "2017-05-19T09:15:21.236Z"
-  },
-  {
     "id": "f81fd90a",
     "title": "atom 現在の行を",
     "text": "atom 現在の行を\n現在の行を画面の1行目になるように表示したい",
@@ -178,5 +172,11 @@
     "title": "ffmpegでテスト映像",
     "text": "ffmpegでテスト映像\n ffmpeg -re -f lavfi -i testsrc=duration=50:size=320x240:rate=15 ...",
     "updatedAt": "2017-06-02T02:54:37.013Z"
+  },
+  {
+    "id": "36523948",
+    "title": "githubアクセストークンでpull",
+    "text": "githubアクセストークンでpull\ngit clone https://${user}:${token}@github.com/${org}/${repo}\ngit config --local user.name ${user}\ngit config --local user.email ${email}\n",
+    "updatedAt": "2017-06-06T04:36:05.608Z"
   }
 ]
