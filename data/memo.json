@@ -178,5 +178,11 @@
     "title": "githubアクセストークンでpull",
     "text": "githubアクセストークンでpull\ngit clone https://${user}:${token}@github.com/${org}/${repo}\ngit config --local user.name ${user}\ngit config --local user.email ${email}\n",
     "updatedAt": "2017-06-06T04:36:05.608Z"
+  },
+  {
+    "id": "6b7985d7",
+    "title": "音声ファイルを動画mp4に",
+    "text": "音声ファイルを動画mp4に\nffmpeg -loop 1 -i rain.jpg -i psalm22.wav -shortest -r 1 -pix_fmt yuv420p video.mp4",
+    "updatedAt": "2017-06-18T15:05:32.468Z"
   }
 ]
