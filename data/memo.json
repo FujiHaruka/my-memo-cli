@@ -184,5 +184,17 @@
     "title": "音声ファイルを動画mp4に",
     "text": "音声ファイルを動画mp4に\nffmpeg -loop 1 -i rain.jpg -i psalm22.wav -shortest -r 1 -pix_fmt yuv420p video.mp4",
     "updatedAt": "2017-06-18T15:05:32.468Z"
+  },
+  {
+    "id": "8b16d3c2",
+    "title": "kidle_injectを殺す",
+    "text": "kidle_injectを殺す\nsudo rmmod intel_powerclamp",
+    "updatedAt": "2017-07-03T05:39:54.469Z"
+  },
+  {
+    "id": "2c4dae3e",
+    "title": "ffmpegで動画からgifを切り出す",
+    "text": "ffmpegで動画からgifを切り出す\nffmpeg -ss 00:00:05 -t 10 -i input.mp4 -an -r 15 -pix_fmt rgb24 -f gif out.gif\n-s 開始時刻\n-t 秒数",
+    "updatedAt": "2017-07-05T05:42:18.326Z"
   }
 ]
