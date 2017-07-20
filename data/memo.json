@@ -196,5 +196,17 @@
     "title": "ffmpegで動画からgifを切り出す",
     "text": "ffmpegで動画からgifを切り出す\nffmpeg -ss 00:00:05 -t 10 -i input.mp4 -an -r 15 -pix_fmt rgb24 -f gif out.gif\n-s 開始時刻\n-t 秒数",
     "updatedAt": "2017-07-05T05:42:18.326Z"
+  },
+  {
+    "id": "6b380787",
+    "title": "nginxのデータ転送量を調べる",
+    "text": "nginxのデータ転送量を調べる\nワンライナー\n1秒ごとに 受信 送信 のバイト数を出力する\n$ while sleep 1; do cat /proc/$nginx_pid/net/dev | awk '/eth0:/{print $2,$10}'; done",
+    "updatedAt": "2017-07-18T05:57:37.177Z"
+  },
+  {
+    "id": "4ad77918",
+    "title": "dateコマンドのフォーマット",
+    "text": "dateコマンドのフォーマット\n+で始まる書式で指定する。\ndate \"+%Y%m%d-%H%M%S\"",
+    "updatedAt": "2017-07-20T01:06:00.555Z"
   }
 ]
