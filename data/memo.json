@@ -214,5 +214,47 @@
     "title": "ネットワーク監視コマンド",
     "text": "ネットワーク監視コマンド\nnethogs\nプロセスごとの通信量がわかる",
     "updatedAt": "2017-07-20T05:52:48.394Z"
+  },
+  {
+    "id": "e9ef4a82",
+    "title": "Bitbucket API: content CRUD",
+    "text": "Bitbucket API: content CRUD\nhttps://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Busername%7D/%7Brepo_slug%7D/src/%7Bnode%7D/%7Bpath%7D",
+    "updatedAt": "2017-07-26T04:23:01.088Z"
+  },
+  {
+    "id": "ec44870c",
+    "title": "Let's encryptでssl証明書",
+    "text": "Let's encryptでssl証明書\nPort 443 を使っていない状態で。\n$ sudo certbot certonly --standalone -d example.com -m mail@example.com --agree-tos -n\nで証明証を発行し、Nginxに設定する。",
+    "updatedAt": "2017-07-27T04:26:26.502Z"
+  },
+  {
+    "id": "3955e23c",
+    "title": "Copy between docker and host",
+    "text": "Copy between docker and host\n$ docker cp <コンテナID>:/etc/my.cnf my.cnf",
+    "updatedAt": "2017-07-27T04:53:34.081Z"
+  },
+  {
+    "id": "9fd98973",
+    "title": "jsdoc基本",
+    "text": "jsdoc基本\n/**\n * 関数\n * @param {string} str - 文字列の引数\n * @param {number} num - 数値の引数\n * @param {Object} obj - オブジェクトの引数\n * @param {MyClass} myClass - MyClass インスタンスの引数\n */\nfunction func() {}",
+    "updatedAt": "2017-08-08T02:46:31.412Z"
+  },
+  {
+    "id": "752fbf70",
+    "title": "cleanup docker volumes",
+    "text": "cleanup docker volumes\n# どのコンテナからも参照されていない Data Volume のディレクトリをすべて削除\n$ docker run --rm \\\n    -v /var/run/docker.sock:/var/run/docker.sock \\\n    -v /var/lib/docker:/var/lib/docker \\\n    martin/docker-cleanup-volumes",
+    "updatedAt": "2017-08-15T02:41:53.813Z"
+  },
+  {
+    "id": "1664cb99",
+    "title": "du command options",
+    "text": "du command options\n-k, --kilobytes\t単位をKバイトにする\n-m, --megabytes\t単位をMバイトにする\n-c, --total\t検索したすべての容量の総計を表示する\n-S, --separate-dirs\t個々のディレクトリでサブディレクトリを含めずに表示する\n",
+    "updatedAt": "2017-08-15T02:49:11.777Z"
+  },
+  {
+    "id": "b6c6f2d1",
+    "title": "shellの変数",
+    "text": "shellの変数\n\nfoo=${1:-hoge}\necho $foo #$1がなかったらhogeをデフォルト値としてfooに代入する\n\n#var自身にデフォルト値としてhogeを代入としたいので以下のように書きたい\n${var:=hoge} #このままでは、hogeが展開されてしまって、hogeなんてコマンドはないとシェル怒られる\necho \"1:$var\"\n\nvar=\necho ${var:=hoge} > /dev/null #echoで変数展開をしつつ不要な出力は抑える\necho \"2:$var\"\n\nvar=\n: ${var:=hoge} #何もしないコマンド:で変数展開のみを行う\necho $var #変数展開後、varにhogeが代入される\necho \"3:$var\"\n\nvar=\n: ${var:-hoge}\necho $var #変数展開後、varにhogeが代入されない\necho \"4:$var\"",
+    "updatedAt": "2017-08-24T06:03:07.333Z"
   }
 ]
