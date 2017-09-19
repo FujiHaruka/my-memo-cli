@@ -256,5 +256,17 @@
     "title": "shellの変数",
     "text": "shellの変数\n\nfoo=${1:-hoge}\necho $foo #$1がなかったらhogeをデフォルト値としてfooに代入する\n\n#var自身にデフォルト値としてhogeを代入としたいので以下のように書きたい\n${var:=hoge} #このままでは、hogeが展開されてしまって、hogeなんてコマンドはないとシェル怒られる\necho \"1:$var\"\n\nvar=\necho ${var:=hoge} > /dev/null #echoで変数展開をしつつ不要な出力は抑える\necho \"2:$var\"\n\nvar=\n: ${var:=hoge} #何もしないコマンド:で変数展開のみを行う\necho $var #変数展開後、varにhogeが代入される\necho \"3:$var\"\n\nvar=\n: ${var:-hoge}\necho $var #変数展開後、varにhogeが代入されない\necho \"4:$var\"",
     "updatedAt": "2017-08-24T06:03:07.333Z"
+  },
+  {
+    "id": "1bb4f460",
+    "title": "cpu使用率をsarコマンドで監視",
+    "text": "cpu使用率をsarコマンドで監視\nLANG=C sar -m CPU 2",
+    "updatedAt": "2017-08-29T02:05:07.053Z"
+  },
+  {
+    "id": "203b3d0f",
+    "title": "shell: !$, !!, !3",
+    "text": "shell: !$, !!, !3\n!$ 直前のコマンドの最後の引数\n!! 直前のコマンド全体\n!3 history の番号",
+    "updatedAt": "2017-09-19T01:02:39.644Z"
   }
 ]
